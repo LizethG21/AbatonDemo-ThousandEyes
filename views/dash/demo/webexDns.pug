@@ -1,0 +1,24 @@
+mixin webexDns(id,title,data,regionId)
+    div.widget.col-md-6
+            div
+                div.head
+                    .filters
+                        h5 Query Time
+                        .sem.green
+                        img.close(src="/images/icon-btn-close.svg")
+                table(style="width:100%;")
+                    tr
+                        td
+                            canvas#chartLineTansTimeWebexDNS(style="margin-top: 20px" width="500" height="200")
+                table(style="width:100%; font-size: 12px;text-align:center;")
+                    tr
+                        td(style="vertical-align: middle")
+                            .bullet.lightIn(style="margin: 0px 20px 0 10px;")
+                            h5(style="margin:0") Query Time&nbsp;
+                            
+                        td
+                            h4.green 2% &nearr;
+    block scripts
+        script(src="/javascripts/demo/webexDns.js")
+        script chartAtnTimeTimeline();
+        script updateChartAtnTimeTimeline();

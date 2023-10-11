@@ -1,0 +1,44 @@
+mixin alerts()
+    .col-md-12.widget
+        div
+            .head
+                .filters
+                    h5 Alertas Activas
+                    img.close(src="/images/icon-btn-close.svg")
+            br
+            table#tableEvents.text-center(style="width:100%;margin-top:2%;margin-bottom:2%")
+                thead
+                    th Fecha Inicio
+                    th Expresion
+                    th Regla
+                    th Prueba
+                    th Tipo
+                tbody
+    .col-md-12.widget
+        div
+            .head
+                .filters
+                    h5 Agentes Con alertas
+                    img.close(src="/images/icon-btn-close.svg")
+            br
+            table#tableAgents.text-center(style="width:100%;margin-top:2%;margin-bottom:2%")
+                thead
+                    th Activo
+                    th Agente
+                    th Fecha Inicio
+                    th Metrica
+                tbody
+    .col-md-6.widget
+        div
+            .head
+                .filters
+                    h5 Agentes Con alertas
+                    img.close(src="/images/icon-btn-close.svg")
+            br
+            table(style="width:100%;")
+                tr
+                    td
+                        canvas#chartLineAlerts(style="margin-top: 20px" width="550" height="200")
+    block scripts
+        script(src="/javascripts/demo/alerts.js")
+        script loopDash();
